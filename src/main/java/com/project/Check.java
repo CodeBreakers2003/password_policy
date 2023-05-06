@@ -7,7 +7,7 @@ public class Check {
     }
 
 
-    public static boolean uppercase(String input) {
+    public static boolean checkUppercase(String input) {
         for (int i = 0; i < input.length(); i++) {
             if (Character.isUpperCase(input.charAt(i))) {
                 return true;
@@ -16,7 +16,12 @@ public class Check {
         return false;
     }
 
-    public static boolean lowercase(String input) {
+    public static boolean checkLowercase(String input) {
+        for (int i = 0; i < input.length(); i++) {
+            if (Character.isLowerCase(input.charAt(i))) {
+                return true;
+            }
+        }
         return false;
     }
 

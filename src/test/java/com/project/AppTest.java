@@ -16,13 +16,20 @@ public class AppTest
     // Wachtwoorden moeten minstens één hoofdletter, één kleine letter, één cijfer en één symbool bevatten
     @Test
     public void uppercaseTest() {
-        assertTrue(Check.uppercase("abC"));
-        assertTrue(Check.uppercase("abCdeF"));
+        assertTrue(Check.checkUppercase("abC"));
+        assertTrue(Check.checkUppercase("abCdeF"));
+        assertFalse(Check.checkUppercase("abcde"));
+    }
+
+    @Test
+    public void lowercaseTest() {
+        assertTrue(Check.checkLowercase("abc"));
+        assertTrue(Check.checkLowercase("AbcD"));
+        assertFalse(Check.checkLowercase("ABCD"));
     }
 
     // @Test
-    // public void lowercaseTest() {
-    //     assertTrue(Check.lowercase("abc"));
-    //     // assertFalse(Check.lowercase(null));
+    // public void cijferTest() {
+    //     assertTrue(Check..);
     // }
 }
