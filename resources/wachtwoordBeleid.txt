@@ -5,7 +5,7 @@ Wachtwoordvereisten
 -	Wachtwoorden moeten minstens één kleine letter bevatten
 -	Wachtwoorden moeten minstens één cijfer bevatten
 -	Wachtwoorden moeten minstens één symbool bevatten
--	Wachtwoorden mogen geen woorden uit het woordenboek bevatten
+-	Wachtwoorden mogen geen first_name, last_name of username bevatten
 -	Wachtwoorden mogen niet overeenkomen met eerder gebruikte wachtwoorden
 -	Wachtwoorden moeten regelmatig worden gewijzigd (elke 90 dagen)
 

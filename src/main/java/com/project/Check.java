@@ -2,8 +2,8 @@ package com.project;
 
 public class Check {
 
-    public static boolean length(String input) {
-        return true;
+    public static boolean length(String password) {
+        return password.length() >= 12;
     }
 
 
