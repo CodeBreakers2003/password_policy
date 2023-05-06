@@ -1,0 +1,5 @@
+Ons password policy (van woensdag) moet worden geprogrammeerd
+De testen moeten appart geschreven worden
+optional: Using user stories and cucumber
+
+Deadline: komend woensdag (12 mei)

@@ -1,0 +1,22 @@
+Java tests
+Wachtwoordvereisten
+-	Wachtwoorden moeten minimaal 12 tekens lang zijn
+-	Wachtwoorden moeten minstens één hoofdletter bevatten
+-	Wachtwoorden moeten minstens één kleine letter bevatten
+-	Wachtwoorden moeten minstens één cijfer bevatten
+-	Wachtwoorden moeten minstens één symbool bevatten
+-	Wachtwoorden mogen geen woorden uit het woordenboek bevatten
+-	Wachtwoorden mogen niet overeenkomen met eerder gebruikte wachtwoorden
+-	Wachtwoorden moeten regelmatig worden gewijzigd (elke 90 dagen)
+
+Authenticatiesysteem
+- Alle wachtwoorden worden gehashed in de database
+- Wachtwoordherstel verloopt via een beveiligde procedure, waarbij de gebruiker gecontroleerd wordt op basis van security questions en een beveiligde inloglink
+
+Nieuwe gebruikers
+- Nieuwe gebruikers krijgen bij aanmelding een tijdelijk gegenereerd wachtwoord toegewezen, dat zij bij hun eerste inlog moeten wijzigen
+- Nieuwe gebruikers moeten bij aanmelding hun e-mailadres verivieren
+
+Vergeten wachtwoorden
+- Gebruikers kunnen hun wachtwoord herstellen via een "wachtwoord vergeten" knop op de inlogpagina
+- Gebruikers moeten bevestigen dat zij de eigenaar zijn van het account door middel van een beveiligde procedure, waarbij de gebruiker gecontroleerd wordt op basis van persoonlijke informatie en een beveiligde inloglink
