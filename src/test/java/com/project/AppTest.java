@@ -64,4 +64,5 @@ public class AppTest
         String name = "John";
         assertFalse(Check.passwordNotContainsName(password, name));
     }
+
 }
