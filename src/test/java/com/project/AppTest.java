@@ -33,4 +33,36 @@ public class AppTest
         assertTrue(Check.checkNumber("dsf97s9d"));
         assertFalse(Check.checkNumber("sdfds"));
     }
+    
+    // Wachtwoorden mogen geen usernames bevatten.
+    @Test
+    public void passwordNotContainUsernameTest() {
+        String password = "myusername123";
+        String username = "myusername";
+        assertTrue(Check.passwordNotContainUsername(password, username));
+    
+    }
+
+    @Test
+    public void passwordContainUsernameTest() {
+        String password = "479h8nwHe8uw9p";
+        String username = "myusername";
+        assertFalse(Check.passwordNotContainUsername(password, username));
+    }
+
+    //Wachtwoorden mogen geen namen bevatten.
+    @Test
+    public void passwordNotContainsNameTest() {
+        String password = "JohnDoe123";
+        String name = "sam";
+        assertTrue(Check.passwordNotContainsName(password, name));
+    }
+
+    @Test
+    public void passwordContainsNameTest() {
+        String password = "JohnDoe123";
+        String name = "John";
+        assertFalse(Check.passwordNotContainsName(password, name));
+    }
+
 }
