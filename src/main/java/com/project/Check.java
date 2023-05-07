@@ -2,8 +2,8 @@ package com.project;
 
 public class Check {
 
-    public static boolean length(String input) {
-        return true;
+    public static boolean length(String password) {
+        return password.length() >= 12;
     }
 
 
@@ -20,4 +20,17 @@ public class Check {
         return false;
     }
 
+    public static boolean passwordNotContainUsername(String password, String username) {
+        if (password.contains(username)) {
+            return true;
+        }  
+    return false;
+    }
+
+    public static boolean passwordNotContainsName(String password, String name) {
+        if (password.contains(name)) {
+            return false;
+        }  
+    return true;
+    }
 }
