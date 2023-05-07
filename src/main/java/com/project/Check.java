@@ -22,7 +22,7 @@ public class Check {
                 return true;
             }
         }
-        return false;
+
     }
 
     public static boolean checkNumber(String input) {
@@ -34,4 +34,18 @@ public class Check {
         return false;
     }
 
+
+    public static boolean passwordNotContainUsername(String password, String username) {
+        if (password.contains(username)) {
+            return true;
+        }  
+    return false;
+    }
+
+    public static boolean passwordNotContainsName(String password, String name) {
+        if (password.contains(name)) {
+            return false;
+        }  
+    return true;
+    }
 }
