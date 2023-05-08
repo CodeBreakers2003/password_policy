@@ -22,7 +22,7 @@ public class Check {
                 return true;
             }
         }
-
+        return false;
     }
 
     public static boolean checkNumber(String input) {
