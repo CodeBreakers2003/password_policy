@@ -5,7 +5,7 @@ Wachtwoordvereisten
 -	Wachtwoorden moeten minstens één kleine letter bevatten
 -	Wachtwoorden moeten minstens één cijfer bevatten
 -	Wachtwoorden moeten minstens één symbool bevatten
--	Wachtwoorden mogen geen first_name, last_name of username bevatten
+-	Wachtwoorden mogen geen namen of de username username bevatten
 -	Wachtwoorden mogen niet overeenkomen met eerder gebruikte wachtwoorden
 -	Wachtwoorden moeten regelmatig worden gewijzigd (elke 90 dagen)
 
@@ -18,5 +18,7 @@ Nieuwe gebruikers
 - Nieuwe gebruikers moeten bij aanmelding hun e-mailadres verivieren
 
 Vergeten wachtwoorden
-- Gebruikers kunnen hun wachtwoord herstellen via een "wachtwoord vergeten" knop op de inlogpagina
-- Gebruikers moeten bevestigen dat zij de eigenaar zijn van het account door middel van een beveiligde procedure, waarbij de gebruiker gecontroleerd wordt op basis van persoonlijke informatie en een beveiligde inloglink
+- Gebruikers kunnen hun wachtwoord herstellen via een "wachtwoord vergeten" functie op de inlogpagina
+- Gebruikers krijgen een link via het mail om de wachtwoord te resetten.
+- Gebruikers moeten bevestigen dat zij de eigenaar zijn van het account door middel van een beveiligde procedure,
+  waarbij de gebruiker gecontroleerd wordt op basis van security vragen
