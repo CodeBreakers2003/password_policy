@@ -22,7 +22,7 @@ public class Check {
                 return true;
             }
         }
-
+        return false;
     }
 
     public static boolean checkNumber(String input) {
@@ -47,5 +47,9 @@ public class Check {
             return false;
         }  
     return true;
+    }
+
+    public static boolean checkForPrevPasw(String hash1, String hash2) {
+        return (hash1 == hash2);
     }
 }
