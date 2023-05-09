@@ -1,5 +1,4 @@
 package com.project;
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
@@ -63,6 +62,13 @@ public class AppTest
         String password = "JohnDoe123";
         String name = "John";
         assertFalse(Check.passwordNotContainsName(password, name));
+    }
+
+    // Wachtwoorden mogen niet overeenkomen met eerder gebruikte wachtwoorden
+    @Test
+    public void checkForPrevPaswTest() {
+        assertTrue(Check.checkForPrevPasw("gadbdr4534gv43gq", "gadbdr4534gv43gq"));
+        assertFalse(Check.checkForPrevPasw("gadbdr4534gv43gq", "g8943u89h4n3bbuh"));
     }
 
 }
