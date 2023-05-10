@@ -52,4 +52,15 @@ public class Check {
     public static boolean checkForPrevPasw(String hash1, String hash2) {
         return (hash1 == hash2);
     }
+    
+    public static boolean isPasswordOlderThan90Days(String dateString) {
+        LocalDate today = LocalDate.now();
+        LocalDate date = LocalDate.parse(dateString, DateTimeFormatter.ofPattern("dd-MM-yy"));
+        long daysBetween = ChronoUnit.DAYS.between(date, today);
+        if (daysBetween >= 90) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
