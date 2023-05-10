@@ -70,5 +70,12 @@ public class AppTest
         assertTrue(Check.checkForPrevPasw("gadbdr4534gv43gq", "gadbdr4534gv43gq"));
         assertFalse(Check.checkForPrevPasw("gadbdr4534gv43gq", "g8943u89h4n3bbuh"));
     }
+    
+    //Wachtwoorden ouder dan 90 dagen moeten worden gewijzigd
+    @Test
+    public void testCheckDateIs90Days() {
+        assertFalse(Check.isPasswordOlderThan90Days("10-05-23"));
+        assertTrue(Check.isPasswordOlderThan90Days("10-05-21"));
+    }
 
 }
