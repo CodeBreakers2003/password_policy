@@ -53,10 +53,14 @@ public class Check {
         return (hash1 == hash2);
     }
     
-        //Wachtwoorden ouder dan 90 dagen moeten worden gewijzigd
-    @Test
-    public void testCheckDateIs90Days() {
-        assertFalse(Check.isPasswordOlderThan90Days("10-05-23"));
-        assertTrue(Check.isPasswordOlderThan90Days("10-05-21"));
+    public static boolean isPasswordOlderThan90Days(String dateString) {
+        LocalDate today = LocalDate.now();
+        LocalDate date = LocalDate.parse(dateString, DateTimeFormatter.ofPattern("dd-MM-yy"));
+        long daysBetween = ChronoUnit.DAYS.between(date, today);
+        if (daysBetween >= 90) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
