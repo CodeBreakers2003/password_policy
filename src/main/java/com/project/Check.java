@@ -52,4 +52,11 @@ public class Check {
     public static boolean checkForPrevPasw(String hash1, String hash2) {
         return (hash1 == hash2);
     }
+    
+        //Wachtwoorden ouder dan 90 dagen moeten worden gewijzigd
+    @Test
+    public void testCheckDateIs90Days() {
+        assertFalse(Check.isPasswordOlderThan90Days("10-05-23"));
+        assertTrue(Check.isPasswordOlderThan90Days("10-05-21"));
+    }
 }
