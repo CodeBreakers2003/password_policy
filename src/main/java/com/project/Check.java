@@ -39,7 +39,7 @@ public class Check {
 
     // Checks if the password contains the username
     public static boolean passwordNotContainUsername(String password, String username) {
-        if (password.contains(username)) {
+        if (!password.contains(username)) {
             return true;
         }  
     return false;
@@ -56,5 +56,38 @@ public class Check {
     // Cheks if the password matches a prevous used password
     public static boolean checkForPrevPasw(String hash1, String hash2) {
         return (hash1 == hash2);
+    }
+
+    // Checks if password passes all requirements
+    public static boolean validatePassword(String password, String username, String name, String previousPasswordHash) {
+        if (!checkLength(password)) {
+            return false;
+        }
+
+        if (!checkUppercase(password)) {
+            return false;
+        }
+
+        if (!checkLowercase(password)) {
+            return false;
+        }
+
+        if (!checkNumber(password)) {
+            return false;
+        }
+
+        if (!passwordNotContainUsername(password, username)) {
+            return false;
+        }
+
+        // if (!passwordNotContainsName(password, name)) {
+        //     return false;
+        // }
+
+        // if (checkForPrevPasw(CryptoUtils.getHash(password), previousPasswordHash)) {
+        //     return false;
+        // }
+
+        return true;
     }
 }
