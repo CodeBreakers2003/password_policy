@@ -2,7 +2,7 @@ package com.project;
 
 public class Check {
 
-    public static boolean length(String password) {
+    public static boolean checkLength(String password) {
         return password.length() >= 12;
     }
 
