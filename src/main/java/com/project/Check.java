@@ -58,7 +58,17 @@ public class Check {
         return (hash1 == hash2);
     }
 
-    // Checks if password passes all requirements
+    public static boolean isPasswordOlderThan90Days(String dateString) {
+        LocalDate today = LocalDate.now();
+        LocalDate date = LocalDate.parse(dateString, DateTimeFormatter.ofPattern("dd-MM-yy"));
+        long daysBetween = ChronoUnit.DAYS.between(date, today);
+        if (daysBetween >= 90) {
+            return true;
+        } else {
+            return false;
+        }
+  
+      // Checks if password passes all requirements
     public static boolean validatePassword(String password, String username, String name, String previousPasswordHash) {
         if (!checkLength(password)) {
             return false;
