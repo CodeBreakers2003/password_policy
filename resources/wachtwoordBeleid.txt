@@ -14,7 +14,7 @@ Authenticatiesysteem
 - Wachtwoordherstel verloopt via een beveiligde procedure, waarbij de gebruiker gecontroleerd wordt op basis van security questions en een beveiligde inloglink
 
 Nieuwe gebruikers
-- Nieuwe gebruikers krijgen bij aanmelding een tijdelijk gegenereerd wachtwoord toegewezen, dat zij bij hun eerste inlog moeten wijzigen
+- Nieuwe gebruikers krijgen bij het aanmelden een tijdelijk gegenereerd wachtwoord toegewezen, dat zij bij hun eerste inlog moeten wijzigen
 - Nieuwe gebruikers moeten bij aanmelding hun e-mailadres verivieren
 
 Vergeten wachtwoorden
